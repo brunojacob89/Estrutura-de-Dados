@@ -3,9 +3,15 @@ package ed.listaligada;
 public class Celula {
 	
 	private Object elemento;
-	private Celula proxima;
 	
-	public Celula(Object elemento, Celula proxima) {
+	private Celula proxima;
+	private Celula anterior;
+	
+	public Celula(Object elemento) {
+		this(null, elemento);
+	}
+	
+	public Celula(Celula proxima, Object elemento) {
 		super();
 		this.elemento = elemento;
 		this.proxima = proxima;
@@ -19,6 +25,14 @@ public class Celula {
 	}
 	public Object getElemento() {
 		return elemento;
+	}
+
+	public Celula getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Celula anterior) {
+		this.anterior = anterior;
 	}
 	
 	
